@@ -8,6 +8,17 @@ export default ({ command }) => ({
             input: 'resources/js/app.js',
         },
     },
+    plugins:[{
+        name: 'blade',
+        handleHotUpdate({ file, server }) {
+            if (file.endsWith('.blade.php')) {
+                server.ws.send({
+                    type: 'full-reload',
+                    path: '*',
+                });
+            }
+        },
+    }],
     server: {
         host: true
     }
