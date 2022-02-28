@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite --host 0.0.0.0",
+        "production": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^0.25",
+        "lodash": "^4.17.19",
+        "vite": "^2.8.4"
+    },
+    "dependencies": {
+        "dynamic-import-polyfill": "^0.1.1"
+    }
+}
