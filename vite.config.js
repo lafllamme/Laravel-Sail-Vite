@@ -1,3 +1,6 @@
+import vue from '@vitejs/plugin-vue';
+
+
 export default ({ command }) => ({
     base: command === 'serve' ? '' : '/build/',
     publicDir: 'fake_dir_so_nothing_gets_copied',
@@ -8,7 +11,7 @@ export default ({ command }) => ({
             input: 'resources/js/app.js',
         },
     },
-    plugins:[{
+    plugins: [{
         name: 'blade',
         handleHotUpdate({ file, server }) {
             if (file.endsWith('.blade.php')) {
@@ -18,7 +21,8 @@ export default ({ command }) => ({
                 });
             }
         },
-    }],
+    },
+    vue()],
     server: {
         host: true
     }

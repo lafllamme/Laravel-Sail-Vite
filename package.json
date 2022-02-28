@@ -5,12 +5,14 @@
         "production": "vite build"
     },
     "devDependencies": {
+        "@vitejs/plugin-vue": "latest",
         "autoprefixer": "^10.0.2",
         "axios": "^0.25",
         "lodash": "^4.17.19",
         "postcss": "^8.1.10",
         "tailwindcss": "latest",
-        "vite": "^2.8.4"
+        "vite": "latest",
+        "vue": "^3.2.31"
     },
     "dependencies": {
         "dynamic-import-polyfill": "^0.1.1"
